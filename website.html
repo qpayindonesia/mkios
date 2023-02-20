@@ -15,7 +15,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Dashboard - eCommerce | Vuexy - Bootstrap Admin Template</title>
+    <title>Horizontal Layouts - Forms | Vuexy - Bootstrap Admin Template</title>
 
     <meta name="description" content="" />
 
@@ -44,10 +44,8 @@
     <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="assets/vendor/libs/node-waves/node-waves.css" />
     <link rel="stylesheet" href="assets/vendor/libs/typeahead-js/typeahead.css" />
-    <link rel="stylesheet" href="assets/vendor/libs/apex-charts/apex-charts.css" />
-    <link rel="stylesheet" href="assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
-    <link rel="stylesheet" href="assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
-    <link rel="stylesheet" href="assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+    <link rel="stylesheet" href="assets/vendor/libs/flatpickr/flatpickr.css" />
+    <link rel="stylesheet" href="assets/vendor/libs/select2/select2.css" />
 
     <!-- Page CSS -->
 
@@ -114,7 +112,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboards -->
             
-            <li class="menu-item active">
+            <li class="menu-item ">
               <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-smart-home"></i>
                 <div data-i18n="Beranda">Beranda</div>
@@ -209,7 +207,7 @@
               <span class="menu-header-text">Pengaturan</span>
             </li>
             
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="website.html" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-settings"></i>
                 <div data-i18n="Website">Website</div>
@@ -626,373 +624,77 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard/</span> Pengaturan Website</h4>
+
+              <!-- Basic Layout & Basic with Icons -->
               <div class="row">
-                <!-- View sales -->
-                <div class="col-xl-4 mb-4 col-lg-5 col-12">
-                  <div class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-7">
-                        <div class="card-body text-nowrap">
-                          <h5 class="card-title mb-0">Hai Username! 🎉</h5>
-                          <p class="mb-2">Omzet Kamu Bulan Ini</p>
-                          <h4 class="text-primary mb-1">Rp. 15.000.000</h4>
-                          <a href="javascript:;" class="btn btn-primary">View Sales</a>
-                        </div>
-                      </div>
-                      <div class="col-5 text-center text-sm-left">
-                        <div class="card-body pb-0 px-0 px-md-4">
-                          <img
-                            src="assets/img/illustrations/card-advance-sale.png"
-                            height="140"
-                            alt="view sales"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- View sales -->
-
-                <!-- Statistics -->
-                <div class="col-xl-8 mb-4 col-lg-7 col-12">
-                  <div class="card h-100">
-                    <div class="card-header">
-                      <div class="d-flex justify-content-between mb-3">
-                        <h5 class="card-title mb-0">Data Statistik</h5>
-                        <small class="text-muted">Updated 1 Bulan</small>
-                      </div>
-                    </div>
+                <div class="col-xl">
+                  <div class="card mb-4">
                     <div class="card-body">
-                      <div class="row gy-3">
-                        <div class="col-md-3 col-6">
-                          <div class="d-flex align-items-center">
-                            <div class="badge rounded-pill bg-label-primary me-3 p-2">
-                              <i class="ti ti-brand-instagram ti-sm"></i>
-                            </div>
-                            <div class="card-info">
-                              <h5 class="mb-0">230</h5>
-                              <small>Sosmed</small>
-                            </div>
+                      <form class="card-body">
+                        <h6>1.Pengaturan Umum </h6>
+                        <div class="row g-3">
+                          <div class="col-md-3">
+                            <label class="form-label">Nama Website</label>
+                            <input type="text"  class="form-control" placeholder="Merangintech" />
+                          </div>
+                          <div class="col-md-3">
+                            <label class="form-label">Email Website</label>
+                            <input type="email"  class="form-control" placeholder="hello@mail.com" />
+                          </div>
+                          <div class="col-md-3">
+                            <label class="form-label">WA Website</label>
+                            <input type="number"  class="form-control" placeholder="08xx-xxxx-xxxx" />
+                          </div>
+                          <div class="col-md-3">
+                            <label class="form-label">Telegram Website</label>
+                            <input type="number"  class="form-control" placeholder="08xx-xxxx-xxxx" />
+                          </div>
+                          
+                        </div>
+                        <hr class="my-4 mx-n4" />
+                        <h6>2. API Tripay</h6>
+                        <div class="row g-3">
+                          <div class="col-md-4">
+                            <label class="form-label">Kode Merchant</label>
+                            <input type="text"  class="form-control" placeholder="TXXXXX" />
+                          </div>
+                          <div class="col-md-4">
+                            <label class="form-label">API Key</label>
+                            <input type="text" class="form-control" placeholder="XXXX-XXXX-XXXX" />
+                          </div>
+                          <div class="col-md-4">
+                            <label class="form-label">Private Key</label>
+                            <input type="text" class="form-control" placeholder="XXXX-XXXX-XXXX" />
                           </div>
                         </div>
-                        <div class="col-md-3 col-6">
-                          <div class="d-flex align-items-center">
-                            <div class="badge rounded-pill bg-label-info me-3 p-2">
-                              <i class="ti ti-device-mobile ti-sm"></i>
-                            </div>
-                            <div class="card-info">
-                              <h5 class="mb-0">150</h5>
-                              <small>Prabayar</small>
-                            </div>
+                        <hr class="my-4 mx-n4" />
+                        <h6>3. API Digiflazz</h6>
+                        <div class="row g-3">
+                          <div class="col-md-6">
+                            <label class="form-label">Username</label>
+                            <input type="text"  class="form-control" placeholder="XXXXX" />
                           </div>
+                          <div class="col-md-6">
+                            <label class="form-label">Production Key</label>
+                            <input type="text" class="form-control" placeholder="XXXX-XXXX-XXXX" />
+                          </div>
+                          
                         </div>
-                        <div class="col-md-3 col-6">
-                          <div class="d-flex align-items-center">
-                            <div class="badge rounded-pill bg-label-danger me-3 p-2">
-                              <i class="ti ti-device-tablet ti-sm"></i>
-                            </div>
-                            <div class="card-info">
-                              <h5 class="mb-0">1.423</h5>
-                              <small>Pascabayar</small>
-                            </div>
-                          </div>
+                        <div class="pt-4">
+                          <button type="submit" class="btn btn-primary me-sm-3 me-1"><i class="ti ti-archive"></i
+                            > Simpan</button>
+                          
                         </div>
-                        <div class="col-md-3 col-6">
-                          <div class="d-flex align-items-center">
-                            <div class="badge rounded-pill bg-label-success me-3 p-2">
-                              <i class="ti ti-user ti-sm"></i>
-                            </div>
-                            <div class="card-info">
-                              <h5 class="mb-0">100</h5>
-                              <small>User</small>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      </form>
                     </div>
                   </div>
                 </div>
-                <!--/ Statistics -->
-
-                <!-- Cards with few info -->
-                <div class="col-lg-3 col-sm-6 mb-4">
-                  <div class="card">
-                    <div class="card-body d-flex justify-content-between align-items-center">
-                      <div class="card-title mb-0">
-                        <h5 class="mb-0 me-2">100</h5>
-                        <small>Deposit Sukses</small>
-                      </div>
-                      <div class="card-icon">
-                        <span class="badge bg-label-primary rounded-pill p-2">
-                          <i class="ti ti-wallet ti-sm"></i>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mb-4">
-                  <div class="card">
-                    <div class="card-body d-flex justify-content-between align-items-center">
-                      <div class="card-title mb-0">
-                        <h5 class="mb-0 me-2">150</h5>
-                        <small>Deposit Pending</small>
-                      </div>
-                      <div class="card-icon">
-                        <span class="badge bg-label-success rounded-pill p-2">
-                          <i class="ti ti-wallet ti-sm"></i>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mb-4">
-                  <div class="card">
-                    <div class="card-body d-flex justify-content-between align-items-center">
-                      <div class="card-title mb-0">
-                        <h5 class="mb-0 me-2">123</h5>
-                        <small>Deposit Expired</small>
-                      </div>
-                      <div class="card-icon">
-                        <span class="badge bg-label-warning rounded-pill p-2">
-                          <i class="ti ti-wallet ti-sm"></i>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mb-4">
-                  <div class="card">
-                    <div class="card-body d-flex justify-content-between align-items-center">
-                      <div class="card-title mb-0">
-                        <h5 class="mb-0 me-2">128</h5>
-                        <small>Error</small>
-                      </div>
-                      <div class="card-icon">
-                        <span class="badge bg-label-danger rounded-pill p-2">
-                          <i class="ti ti-wallet ti-sm"></i>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-                <!-- Earning Reports -->
-                <div class="col-xl-4 col-lg-5 col-md-6 mb-4">
-                  <div class="card h-100">
-                    <div class="card-header d-flex justify-content-between">
-                      <div class="card-title mb-0">
-                        <h5 class="m-0 me-2">Pemesanan Sosmed</h5>
-                        <small class="text-muted">Data Order 1Bulan</small>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <ul class="p-0 m-0">
-                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-                          <div class="badge bg-label-primary rounded p-2"><i class="ti ti-check ti-sm"></i></div>
-                          <div class="d-flex justify-content-between w-100 flex-wrap">
-                            <h6 class="mb-0 ms-3">Berhasil</h6>
-                            <div class="d-flex">
-                              <p class="mb-0 fw-semibold">12,346</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-                          <div class="badge bg-label-info rounded p-2"><i class="ti ti-shopping-cart ti-sm"></i></div>
-                          <div class="d-flex justify-content-between w-100 flex-wrap">
-                            <h6 class="mb-0 ms-3">Proses</h6>
-                            <div class="d-flex">
-                              <p class="mb-0 fw-semibold">8734</p>
-                              
-                            </div>
-                          </div>
-                        </li>
-                        
-                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-                          <div class="badge bg-label-secondary rounded p-2">
-                            <i class="ti ti-alert-triangle ti-sm text-body"></i>
-                          </div>
-                          <div class="d-flex justify-content-between w-100 flex-wrap">
-                            <h6 class="mb-0 ms-3">Pending</h6>
-                            <div class="d-flex">
-                              <p class="mb-0 fw-semibold">10</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                          <div class="badge bg-label-danger rounded p-2"><i class="ti ti-ban ti-sm"></i></div>
-                          <div class="d-flex justify-content-between w-100 flex-wrap">
-                            <h6 class="mb-0 ms-3">Error/Gagal</h6>
-                            <div class="d-flex">
-                              <p class="mb-0 fw-semibold">86</p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!--/ Earning Reports -->
-
-                <!-- Popular Product -->
-                <div class="col-md-6 col-xl-4 mb-4">
-                  <div class="card h-100">
-                    <div class="card-header d-flex justify-content-between">
-                      <div class="card-title m-0 me-2">
-                        <h5 class="m-0 me-2">Pemesanan Prabayar</h5>
-                        <small class="text-muted">Data Order 1Bulan</small>
-                      </div>
-                      
-                    </div>
-                    <div class="card-body">
-                      <ul class="p-0 m-0">
-                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-                          <div class="badge bg-label-primary rounded p-2"><i class="ti ti-check ti-sm"></i></div>
-                          <div class="d-flex justify-content-between w-100 flex-wrap">
-                            <h6 class="mb-0 ms-3">Berhasil</h6>
-                            <div class="d-flex">
-                              <p class="mb-0 fw-semibold">12,346</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-                          <div class="badge bg-label-info rounded p-2"><i class="ti ti-shopping-cart ti-sm"></i></div>
-                          <div class="d-flex justify-content-between w-100 flex-wrap">
-                            <h6 class="mb-0 ms-3">Proses</h6>
-                            <div class="d-flex">
-                              <p class="mb-0 fw-semibold">8734</p>
-                              
-                            </div>
-                          </div>
-                        </li>
-                        
-                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-                          <div class="badge bg-label-secondary rounded p-2">
-                            <i class="ti ti-alert-triangle ti-sm text-body"></i>
-                          </div>
-                          <div class="d-flex justify-content-between w-100 flex-wrap">
-                            <h6 class="mb-0 ms-3">Pending</h6>
-                            <div class="d-flex">
-                              <p class="mb-0 fw-semibold">10</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                          <div class="badge bg-label-danger rounded p-2"><i class="ti ti-ban ti-sm"></i></div>
-                          <div class="d-flex justify-content-between w-100 flex-wrap">
-                            <h6 class="mb-0 ms-3">Error/Gagal</h6>
-                            <div class="d-flex">
-                              <p class="mb-0 fw-semibold">86</p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!--/ Popular Product -->
-
-                <!-- Sales by Countries tabs-->
-                <div class="col-md-6 col-xl-4 col-xl-4 mb-4">
-                  <div class="card h-100">
-                    <div class="card-header d-flex justify-content-between pb-2 mb-1">
-                      <div class="card-title mb-1">
-                        <h5 class="m-0 me-2">Pemesanan Pascabayar</h5>
-                        <small class="text-muted">Data Order 1Bulan</small>
-                      </div>
-                      
-                    </div>
-                    <div class="card-body">
-                      <ul class="p-0 m-0">
-                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-                          <div class="badge bg-label-primary rounded p-2"><i class="ti ti-check ti-sm"></i></div>
-                          <div class="d-flex justify-content-between w-100 flex-wrap">
-                            <h6 class="mb-0 ms-3">Berhasil</h6>
-                            <div class="d-flex">
-                              <p class="mb-0 fw-semibold">12,346</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-                          <div class="badge bg-label-info rounded p-2"><i class="ti ti-shopping-cart ti-sm"></i></div>
-                          <div class="d-flex justify-content-between w-100 flex-wrap">
-                            <h6 class="mb-0 ms-3">Proses</h6>
-                            <div class="d-flex">
-                              <p class="mb-0 fw-semibold">8734</p>
-                              
-                            </div>
-                          </div>
-                        </li>
-                        
-                        <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-                          <div class="badge bg-label-secondary rounded p-2">
-                            <i class="ti ti-alert-triangle ti-sm text-body"></i>
-                          </div>
-                          <div class="d-flex justify-content-between w-100 flex-wrap">
-                            <h6 class="mb-0 ms-3">Pending</h6>
-                            <div class="d-flex">
-                              <p class="mb-0 fw-semibold">10</p>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                          <div class="badge bg-label-danger rounded p-2"><i class="ti ti-ban ti-sm"></i></div>
-                          <div class="d-flex justify-content-between w-100 flex-wrap">
-                            <h6 class="mb-0 ms-3">Error/Gagal</h6>
-                            <div class="d-flex">
-                              <p class="mb-0 fw-semibold">86</p>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!--/ Sales by Countries tabs -->
-
-                <!-- Transactions -->
-                <div class="col-lg-4 col-4 mb-4 mb-lg-0">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="badge p-2 bg-label-danger mb-2 rounded"><i class="ti ti-brand-instagram ti-sm"></i></div>
-                      <h5 class="card-title mb-1 pt-1">Total Keuntungan Sosmed</h5>
-                      <small class="text-muted">Data 1 Bulan</small>
-                      <p class="mb-2 mt-1">Rp. 15.000.000</p>
-                      
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Total Sales -->
-                <div class="col-lg-4 col-4 mb-4 mb-lg-0">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="badge p-2 bg-label-success mb-2 rounded"><i class="ti ti-device-mobile ti-sm"></i></div>
-                      <h5 class="card-title mb-1 pt-1">Total Keuntungan Prabayar</h5>
-                      <small class="text-muted">Data 1 Bulan</small>
-                      <p class="mb-2 mt-1">Rp. 12.000.000</p>
-                      
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-4 mb-4 mb-lg-0">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="badge p-2 bg-label-success mb-2 rounded"><i class="ti ti-device-tablet ti-sm"></i></div>
-                      <h5 class="card-title mb-1 pt-1">Total Keuntungan Pascabayar</h5>
-                      <small class="text-muted">Data 1 Bulan</small>
-                      <p class="mb-2 mt-1">Rp. 28.000.000</p>
-                      
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </div>
             <!-- / Content -->
 
-            <!-- Footer -->
+           <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl">
                 <div
@@ -1041,12 +743,17 @@
     <script src="assets/vendor/js/menu.js"></script>
     <!-- endbuild -->
 
-    
+    <!-- Vendors JS -->
+    <script src="assets/vendor/libs/cleavejs/cleave.js"></script>
+    <script src="assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+    <script src="assets/vendor/libs/moment/moment.js"></script>
+    <script src="assets/vendor/libs/flatpickr/flatpickr.js"></script>
+    <script src="assets/vendor/libs/select2/select2.js"></script>
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="assets/js/dashboards-ecommerce.js"></script>
+    <script src="assets/js/form-layouts.js"></script>
   </body>
 </html>
