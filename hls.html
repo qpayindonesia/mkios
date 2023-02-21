@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>M3U8 Player</title>
+    <title>HLS Player</title>
 </head>
 <body>
     <video id="video-player" controls></video>
 
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script>
-        var video = document.getElementById('video-player');
-        video.src = 'https://moon-storage-delivery-s89.dvsdvsdvsdva.com/hls2/01/02748/30h88mp7ar77_n/index-v1-a1.m3u8?t=2dhmLaVbX0eHZygZt2zp0QLHDqGPxXOra2p-BW2obCI&s=1676996248&e=43200&f=13743136&srv=127.0.0.1&asn=63859&sp=3000';
-        video.addEventListener('loadedmetadata', function() {
-            video.play();
-        });
+        if (Hls.isSupported()) {
+            var video = document.getElementById('video-player');
+            var hls = new Hls();
+            hls.loadSource('https://moon-storage-delivery-s89.dvsdvsdvsdva.com/hls2/01/02748/30h88mp7ar77_n/index-v1-a1.m3u8?t=2dhmLaVbX0eHZygZt2zp0QLHDqGPxXOra2p-BW2obCI&s=1676996248&e=43200&f=13743136&srv=127.0.0.1&asn=63859&sp=3000');
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                video.play();
+            });
+        }
     </script>
 </body>
 </html>
